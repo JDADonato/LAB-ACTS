@@ -1,0 +1,238 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  min-height: 100vh;
+  background-color: #f5f8ff;
+}
+
+.container {
+  width: 100vw;
+  max-width: 1200px;
+  /* height: 10vh; */
+}
+
+/* Resume Styles */
+.resume {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  background-color: #fffffc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  place-self: center;
+}
+
+/* Left Column Styles */
+.left-column {
+  width: 30%;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 0.5fr 1fr 0.5fr;
+  border-right: 1px solid #ccc;
+  background-color: #262525;
+  color: #f4f4f4;
+  padding-left: 10px;
+  padding-right: 45px;
+}
+
+.left-column > div {
+  padding: 1rem;
+  border-bottom: 0.5px solid #bcbaba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.left-column > div:last-child {
+  border-bottom: none;
+}
+
+.pfp {
+  width: 80%;
+  border-radius: 200px;
+  border: solid 5px #08a0e9;
+  margin: 60px 0 20px;
+}
+
+.pfp:hover {
+  width: 95%;
+  margin: 30px 0 20px;
+  transition: 0.5s ease-in-out;
+}
+
+/* Contact Card Styles */
+.contact-card {
+  width: 300px;
+}
+
+.contact-card h2 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 5px 0 30px;
+}
+
+.contact-card h2 .icon {
+  margin-right: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  line-height: 5px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact_icon {
+  width: 5%;
+  margin-right: 10px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 13px 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.fa-house,
+.fa-phone,
+.fa-envelope,
+.fa-briefcase,
+.fa-facebook {
+  background-color: #3498db;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 13px 0;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.fa-address-book,
+.fa-thumbs-up,
+.fa-user-secret,
+.fa-user,
+.fa-graduation-cap,
+.fa-award {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #08a0e9;
+}
+.label {
+  font-size: 0.9rem;
+  color: #3498db;
+  margin: 0;
+}
+
+/* Right Column Styles */
+.right-column {
+  width: 70%;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 1fr 2.5fr;
+  background-color: #ffffff;
+  padding: 0 40px;
+}
+
+.right-column > div {
+  /* padding: 1rem; */
+  border-bottom: 1px solid #eee;
+}
+
+.right-column > div:last-child {
+  border-bottom: none;
+}
+
+.name {
+  line-height: 13px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.name > p {
+  color: #08a0e9;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.name > h1 {
+  font-size: 46px;
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c2a2a;
+}
+
+/* Description Styles */
+.description > h2 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile_icon {
+  width: 3%;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.skill-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 2px 0;
+}
+
+.skill-bar {
+  flex-grow: 1;
+  height: 17px;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 20px;
+}
+.skill-fill.graphic,
+.techlit {
+  width: 80%;
+}
+.skill-fill.leadership,
+.critthink {
+  width: 70%;
+}
+.skill-fill.comms {
+  width: 70%;
+}
+
+.skill-label > span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #808297;
+}
