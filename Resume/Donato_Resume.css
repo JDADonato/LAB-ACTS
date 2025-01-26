@@ -4,16 +4,104 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
+  justify-content: center; 
+  align-items: center; 
   min-height: 100vh;
-  background-color: #f5f8ff;
+  background-color: #111111;
+  transition: 0.3s ease-in-out;
 }
 
 .container {
   width: 100vw;
   max-width: 1200px;
-  /* height: 10vh; */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+body.dark-mode .resume {
+  background-color: #222222;
+  border-color: #444444;
+}
+
+body.dark-mode .left-column {
+  background-color: #000000;
+  border-color: #333333;
+}
+
+body.dark-mode .right-column {
+  background-color: #171717;
+}
+
+body.dark-mode h1 {
+  color: #ffffff; 
+}
+
+body.dark-mode circle {
+  border: white;
+}
+
+body.dark-mode .icon,
+body.dark-mode .fa-house,
+body.dark-mode .fa-phone,
+body.dark-mode .fa-envelope,
+body.dark-mode .fa-briefcase,
+body.dark-mode .fa-facebook {
+  background-color: #eeeeee;
+  color: #08a0e9;
+}
+
+/* body.dark-mode .fa-address-book,
+body.dark-mode .fa-thumbs-up,
+body.dark-mode .fa-user-secret,
+body.dark-mode .fa-user,
+body.dark-mode .fa-graduation-cap,
+body.dark-mode .fa-award {
+  color: #f2f2f2;
+} */
+
+body.dark-mode .contact .label {
+  color: #ffffff;
+}
+
+body.dark-mode .contact p {
+  color: #08a0e9;
+}
+
+body.dark-mode .skill-fill {
+  background-color: #ffffff;
+}
+
+body.dark-mode .skill-bar {
+  background-color: #08a0e9;
+}
+
+body.dark-mode .timeline .circle {
+  background-color: #08a0e9;
+  border-color: #ffffff;
+}
+
+body.dark-mode .timeline .date {
+  color: #ffffff;
+}
+
+body.dark-mode .timeline .content {
+  border-color: #08a0e9;
+}
+
+body.dark-mode .award_desc {
+  color: #e1e1e1;
+}
+
+body.dark-mode .kisay,
+body.dark-mode .feu,
+body.dark-mode .dost,
+body.dark-mode .lscdc {
+  background-color: white;
+  border: #08a0e9 solid 1.5px;
 }
 
 /* Resume Styles */
@@ -31,12 +119,11 @@ body {
 .left-column {
   width: 30%;
   display: grid;
-  grid-template-rows: 1fr 0.5fr 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.8fr 0.5fr 0.4fr 0.8fr 0.5fr;
   border-right: 1px solid #ccc;
   background-color: #262525;
   color: #f4f4f4;
-  padding-left: 10px;
-  padding-right: 45px;
+  padding: 10px 45px 10px 10px;
 }
 
 .left-column > div {
@@ -53,16 +140,10 @@ body {
 }
 
 .pfp {
-  width: 80%;
+  width: 100%;
   border-radius: 200px;
-  border: solid 5px #08a0e9;
-  margin: 60px 0 20px;
-}
-
-.pfp:hover {
-  width: 95%;
-  margin: 30px 0 20px;
-  transition: 0.5s ease-in-out;
+  border: 5px solid #08a0e9;
+  margin: 60px 0 50px;
 }
 
 /* Contact Card Styles */
@@ -74,7 +155,7 @@ body {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  margin: 5px 0 30px;
+  margin: 0 0 30px;
 }
 
 .contact-card h2 .icon {
@@ -84,7 +165,7 @@ body {
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   line-height: 5px;
 }
 
@@ -95,19 +176,6 @@ body {
 .contact_icon {
   width: 5%;
   margin-right: 10px;
-}
-
-.icon {
-  width: 40px;
-  height: 40px;
-  background-color: #3498db;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px 13px 0;
-  color: #fff;
-  font-size: 1.2rem;
 }
 
 .fa-house,
@@ -137,6 +205,7 @@ body {
   margin-right: 12px;
   color: #08a0e9;
 }
+
 .label {
   font-size: 0.9rem;
   color: #3498db;
@@ -147,13 +216,12 @@ body {
 .right-column {
   width: 70%;
   display: grid;
-  grid-template-rows: 0.5fr 1fr 1fr 2.5fr;
+  grid-template-rows: 0.5fr 0.9fr 1.4fr 2.8fr;
   background-color: #ffffff;
   padding: 0 40px;
 }
 
 .right-column > div {
-  /* padding: 1rem; */
   border-bottom: 1px solid #eee;
 }
 
@@ -191,11 +259,16 @@ body {
   width: 3%;
 }
 
+/* Skills Section */
 .skill {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+}
+
+.skills {
+  margin-bottom: 50px;
 }
 
 .skill-label {
@@ -219,14 +292,17 @@ body {
   background-color: #3498db;
   border-radius: 20px;
 }
+
 .skill-fill.graphic,
 .techlit {
   width: 80%;
 }
+
 .skill-fill.leadership,
 .critthink {
   width: 70%;
 }
+
 .skill-fill.comms {
   width: 70%;
 }
@@ -235,4 +311,120 @@ body {
   font-size: 13px;
   font-weight: 600;
   color: #808297;
+}
+
+/* Timeline Styles */
+.timeline {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  position: relative;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 3px solid #3498db;
+  border-radius: 50%;
+  margin-right: 10px; 
+  flex-shrink: 0;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #808297;
+  font-weight: bold;
+  margin-right: 15px; 
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  border-left: 3.5px solid #ddd;
+  padding-left: 20px;
+  margin-left: 155.5px;
+  margin-top: 6px;
+  line-height: 14px;
+}
+
+.level {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3498db;
+  text-align: left;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 5px 0;
+  line-height: 20px;
+}
+
+.school {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+.eduinfos {
+  display: flex;
+  align-items: center;
+  margin-right: 210px;
+}
+
+.space {
+  height: 7px;
+}
+
+.primary {
+  height: 45px;
+}
+
+.secondary {
+  height: 65px;
+}
+
+.tertiary {
+  height: 85px;
+}
+
+/* Icons */
+.feu,
+.kisay {
+  width: 38px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  border: 1px solid #dcdbdb;
+  border-radius: 2000px;
+  padding: 0 5.6px;
+}
+
+.dost,
+.lscdc {
+  width: 45px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  border: 1px solid #dcdbdb;
+  border-radius: 2000px;
+  padding: 2px;
+}
+
+/* Awards Section */
+.award_desc {
+  font-size: 14px;
+  color: #7e8299;
+  line-height: 20px;
+  margin: 8.8px 0;
+}
+
+.award_name {
+  font-weight: bold;
+  margin: 2px 0;
 }
