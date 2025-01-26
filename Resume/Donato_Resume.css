@@ -96,6 +96,10 @@ body.dark-mode .award_desc {
   color: #e1e1e1;
 }
 
+body.dark-mode .honors-awards .award_name{
+  color: #08a0e9;
+}
+
 body.dark-mode .kisay,
 body.dark-mode .feu,
 body.dark-mode .dost,
@@ -109,7 +113,7 @@ body.dark-mode .lscdc {
   display: flex;
   width: 90%;
   max-width: 1000px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   background-color: #fffffc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   place-self: center;
@@ -331,7 +335,7 @@ body.dark-mode .lscdc {
   background-color: #ffffff;
   border: 3px solid #3498db;
   border-radius: 50%;
-  margin-right: 10px; 
+  margin: 20px; 
   flex-shrink: 0;
 }
 
@@ -339,7 +343,6 @@ body.dark-mode .lscdc {
   font-size: 0.9rem;
   color: #808297;
   font-weight: bold;
-  margin-right: 15px; 
   text-align: left;
   flex-shrink: 0;
 }
@@ -347,10 +350,8 @@ body.dark-mode .lscdc {
 .content {
   flex: 1;
   border-left: 3.5px solid #ddd;
-  padding-left: 20px;
-  margin-left: 155.5px;
-  margin-top: 6px;
-  line-height: 14px;
+  padding-left: 27px;
+  margin-left: 160.5px;
 }
 
 .level {
@@ -377,6 +378,7 @@ body.dark-mode .lscdc {
   display: flex;
   align-items: center;
   margin-right: 210px;
+  height: 23px;
 }
 
 .space {
