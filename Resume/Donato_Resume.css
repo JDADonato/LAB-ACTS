@@ -220,7 +220,7 @@ body.dark-mode .lscdc {
 .right-column {
   width: 70%;
   display: grid;
-  grid-template-rows: 0.5fr 0.9fr 1.4fr 2.8fr;
+  grid-template-rows: 0.5fr 0.9fr 1.1fr 2.8fr;
   background-color: #ffffff;
   padding: 0 40px;
 }
