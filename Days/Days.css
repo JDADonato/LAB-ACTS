@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_container {
+  grid-column: 1/1;
+  justify-content: center;
+  align-items: center;
+  padding-left: 200px;
+  border-right: 2px black solid;
+}
+
+.day {
+  width:300px;
+  height: 65px;
+  border: #111111 solid 2px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: #6e6e6e 2px 2px 8px 2px;
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  place-content: center;
+  align-items: center;
+}
+
+h1{
+    font-size: 20px;
+}
+
+
+.mon {
+  background-color: rgb(211, 9, 9);
+}
+.tues {
+  background-color: rgb(240, 156, 0);
+}
+.wed {
+  background-color: yellow;
+}
+.thurs {
+  background-color: green;
+}
+.fri {
+  background-color: rgb(103, 103, 255);
+}
+.satur {
+  background-color: rgb(149, 70, 206);
+}
+.sun {
+  background-color: violet;
+}
+
+.day:hover {
+  width: 315px;
+  height: 75px;
+  transition: 0.5s ease-in-out;
+}
+
+.box_container {
+  grid-column: 2/2;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-right: 200px;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border: #111111 3px solid;
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(70%);
+    transform: translateX(70%); */
+}
+
+.box:hover{
+    transform: translateY(-0%);
+    transform: translateX(70%);
+    transition: .5s ease-in-out;
+}
