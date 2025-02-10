@@ -1,17 +1,17 @@
-var div = document.getElementById('box');
-var display = 0;
+let activeBox = null; 
 
+function hideShow(day) {
+    const boxes = document.querySelectorAll(".box");
+    const newBox = document.querySelector(`.${day}.box`);
 
-function hideShow()
-{
-    if (display==1)
-    {
-        div.style.display = 'block'
-        display = 0;
+    if (activeBox) {
+        activeBox.classList.remove("active"); 
     }
-    else
-    {
-        div.style.display = 'none'
-        display = 1;
+
+    if (activeBox !== newBox) {
+        newBox.classList.add("active"); 
+        activeBox = newBox;
+    } else {
+        activeBox = null; 
     }
 }
