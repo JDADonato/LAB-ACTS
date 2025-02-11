@@ -1,17 +1,20 @@
-let activeBox = null; 
-
-function hideShow(day) {
+document.addEventListener("DOMContentLoaded", function () {
+    const days = document.querySelectorAll(".day");
     const boxes = document.querySelectorAll(".box");
-    const newBox = document.querySelector(`.${day}.box`);
 
-    if (activeBox) {
-        activeBox.classList.remove("active"); 
-    }
+    days.forEach((day, index) => {
+        day.addEventListener("click", function () {
+            const box = boxes[index];
 
-    if (activeBox !== newBox) {
-        newBox.classList.add("active"); 
-        activeBox = newBox;
-    } else {
-        activeBox = null; 
-    }
-}
+            if (box.classList.contains("active")) {
+                box.classList.remove("active");
+                box.classList.add("hidden");
+            } else {
+                boxes.forEach(b => b.classList.remove("active", "hidden"));
+
+                box.classList.add("active");
+                box.classList.remove("hidden");
+            }
+        });
+    });
+});
