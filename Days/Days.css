@@ -8,7 +8,7 @@ body {
   background-color: #ffffff;
   transition: 0.3s ease-in-out;
   background-image: url(swirl.png);
-  border-image-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: absolute;
 }
@@ -29,49 +29,37 @@ body {
   justify-content: center;
   align-items: center;
   padding-left: 200px;
-  border-right: 8px rgb(0, 0, 0) solid;
+  border-right: 6px black solid;
 }
 
 .day {
   width: 300px;
   height: 65px;
-  border: #ffffff solid 3px;
+  border: #111111 solid 2px;
   margin: 15px 0;
   border-radius: 10px;
-  box-shadow: #000000 5px 5px 10px 5px;
+  box-shadow: #6e6e6e 2px 2px 8px 2px;
   place-self: center;
   display: flex;
   flex-direction: column;
   padding: 5px;
   place-content: center;
   align-items: center;
+  cursor: pointer;
+  box-shadow: #111111 5px 5px 10px 5px;
 }
 
 h1 {
   font-size: 20px;
 }
 
-.mon {
-  background-color: rgb(211, 9, 9);
-}
-.tues {
-  background-color: rgb(240, 156, 0);
-}
-.wed {
-  background-color: yellow;
-}
-.thurs {
-  background-color: green;
-}
-.fri {
-  background-color: rgb(103, 103, 255);
-}
-.satur {
-  background-color: rgb(149, 70, 206);
-}
-.sun {
-  background-color: violet;
-}
+.mon { background-color: rgb(211, 9, 9); }
+.tues { background-color: rgb(240, 156, 0); }
+.wed { background-color: yellow; }
+.thurs { background-color: green; }
+.fri { background-color: rgb(103, 103, 255); }
+.satur { background-color: rgb(149, 70, 206); }
+.sun { background-color: violet; }
 
 .day:hover {
   width: 320px;
@@ -81,73 +69,57 @@ h1 {
 
 .box_container {
   grid-column: 2/2;
-  place-content: center;
-  justify-content: center;
-  align-items: center;
-  padding-right: 200px;
   position: relative;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
   width: 300px;
   height: 300px;
-  border: #ffffff 8px solid;
-  border-radius: 20px;
-  box-shadow: #000000 5px 5px 10px 5px;
   position: absolute;
-  top: -100%;
-  left: 28%;
-  transform: translateX(-50%);
-  transition: top 1.5s ease-in-out, background-color 2.5s ease-in-out;
+  top: -350px; 
+  left: 100px;
+  transition: transform 0.8s ease-in-out, background-color 1.5s ease-in-out;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 15px;
+  box-shadow: #111111 5px 5px 10px 5px;
+  text-align: center;
+  place-content: center;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 40px;
+  text-shadow: #111111 5px 5px 5px;
 }
 
-.mon.box {
-  background-color: rgb(64, 6, 6);
-}
-.tues.box {
-  background-color: rgb(94, 64, 10);
-}
-.wed.box {
-  background-color: rgb(89, 89, 4);
-}
-.thurs.box {
-  background-color: rgb(7, 55, 7);
-}
-.fri.box {
-  background-color: rgb(5, 5, 47);
-}
-.satur.box {
-  background-color: rgb(45, 6, 72);
-}
-.sun.box {
-  background-color: rgb(62, 7, 62);
+.box.hidden {
+  transform: translateY(-350px);
+  transition: transform 1s ease-in-out, background-color 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 1; 
 }
 
-.active {
-  top: 50%;
-  transform: translate(-50%, -50%);
+.box.active {
+  transform: translateY(72.5vh);
+  background-color: transparent;
+  opacity: 1; 
 }
 
-.active.mon {
-  background-color: rgb(255, 0, 0);
-}
-.active.tues {
-  background-color: rgb(255, 166, 0);
-}
-.active.wed {
-  background-color: rgb(255, 255, 0);
-}
-.active.thurs {
-  background-color: rgb(36, 255, 36);
-}
-.active.fri {
-  background-color: rgb(40, 40, 255);
-}
-.active.satur {
-  background-color: rgb(152, 42, 255);
-}
-.active.sun {
-  background-color: rgb(255, 100, 255);
-}
+.mon { border-color: rgb(211, 9, 9); }
+.tues { border-color: rgb(240, 156, 0); }
+.wed { border-color: yellow; }
+.thurs { border-color: green; }
+.fri { border-color: rgb(103, 103, 255); }
+.satur { border-color: rgb(149, 70, 206); }
+.sun { border-color: violet; }
+
+.mon.hidden { background-color: rgb(211, 9, 9); }
+.tues.hidden { background-color: rgb(240, 156, 0); }
+.wed.hidden { background-color: yellow; }
+.thurs.hidden { background-color: green; }
+.fri.hidden { background-color: rgb(103, 103, 255); }
+.satur.hidden { background-color: rgb(149, 70, 206); }
+.sun.hidden { background-color: violet; }
