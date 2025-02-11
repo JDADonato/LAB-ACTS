@@ -8,31 +8,27 @@
   </head>
   <body>
 
-
     <div class="container">
-
         <div class="card_container">
-            <button onclick="hideShow('mon')" class="mon day"><h1>MONDAY</h1></button>
-            <button onclick="hideShow('tues')" class="tues day"><h1>TUESDAY</h1></button>
-            <button onclick="hideShow('wed')" class="wed day"><h1>WEDNESDAY</h1></button>
-            <button onclick="hideShow('thurs')" class="thurs day"><h1>THURSDAY</h1></button>
-            <button onclick="hideShow('fri')" class="fri day"><h1>FRIDAY</h1></button>
-            <button onclick="hideShow('satur')" class="satur day"><h1>SATURDAY</h1></button>
-            <button onclick="hideShow('sun')" class="sun day"><h1>SUNDAY</h1></button>
+            <button class="mon day" onclick="showBox('mon')"><h1>MONDAY</h1></button>
+            <button class="tues day" onclick="showBox('tues')"><h1>TUESDAY</h1></button>
+            <button class="wed day" onclick="showBox('wed')"><h1>WEDNESDAY</h1></button>
+            <button class="thurs day" onclick="showBox('thurs')"><h1>THURSDAY</h1></button>
+            <button class="fri day" onclick="showBox('fri')"><h1>FRIDAY</h1></button>
+            <button class="satur day" onclick="showBox('satur')"><h1>SATURDAY</h1></button>
+            <button class="sun day" onclick="showBox('sun')"><h1>SUNDAY</h1></button>
         </div>
 
         <div class="box_container">
-            <div class="mon box" id="box"></div>
-            <div class="tues box" id="box"></div>
-            <div class="wed box" id="box"></div>
-            <div class="thurs box" id="box"></div>
-            <div class="fri box" id="box"></div>
-            <div class="satur box" id="box"></div>
-            <div class="sun box" id="box"></div>
+            <div class="mon box">MONDAY</div>
+            <div class="tues box">TUESDAY</div>
+            <div class="wed box">WEDNESDAY</div>
+            <div class="thurs box">THURSDAY</div>
+            <div class="fri box">FRIDAY</div>
+            <div class="satur box">SATURDAY</div>
+            <div class="sun box">SUNDAY</div>
         </div>
-
     </div>
-
 
     <script src="Days.js"></script>
   </body>
